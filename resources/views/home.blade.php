@@ -4,13 +4,14 @@
 
 @section('content')
 		<div>
-			@if($auth)
+			@auth
 				<a class="menu_item_layer__first" href="{{ asset('logout') }}">LOG OUT</a>
 				<a class="menu_item_layer__second" href="{{ asset('logout') }}">LOG OUT</a>
-			@else
+			@endauth
+			@guest
 				<a class="menu_item_layer__first" href="{{ asset('login') }}">LOG IN</a>
 				<a class="menu_item_layer__second" href="{{ asset('login') }}">LOG IN</a>
-			@endif
+			@endguest
 		</div>
 	</div>
 </header>
@@ -29,7 +30,12 @@
 	</section>
 	<aside class="news__aside">
 		<h2 class="news__aside_header">NOW AVAILABLE LANGUAGES</h2>
-		<p class="news__aside_lang">C, C++, C#, PHP</p>
+		<div class="news__aside_languages">
+			<div class="news__aside_lang">C</div>
+			<div class="news__aside_lang">C++</div>
+			<div class="news__aside_lang">C#</div>
+			<div class="news__aside_lang">PHP</div>
+		</div>
 	</aside>
 </main>
 <footer>

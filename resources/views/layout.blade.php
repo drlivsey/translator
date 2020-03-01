@@ -17,8 +17,14 @@
 	<img src="{{ asset('images/logo.png') }}">
 	<div class="menu">
 		<div>
-			<a class="menu_item_layer__first" href="{{ asset('translate') }}">START WORK</a>
-			<a class="menu_item_layer__second" href="{{ asset('translate') }}">START WORK</a>
+			@auth
+				<a class="menu_item_layer__first" href="{{ asset('translate') }}">TRANSLATE</a>
+				<a class="menu_item_layer__second" href="{{ asset('translate') }}">TRANSLATE</a>
+			@endauth
+			@guest
+				<a class="menu_item_layer__first" href="{{ asset('translate') }}">START WORK</a>
+				<a class="menu_item_layer__second" href="{{ asset('translate') }}">START WORK</a>
+			@endguest
 		</div>
 		<div>
 			<a class="menu_item_layer__first" href="{{ asset('home') }}">NEWS</a>

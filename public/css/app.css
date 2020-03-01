@@ -222,6 +222,10 @@ header > img{
 	color: white;
 }
 
+.main__radio_btn input[type=radio]:disabled + label {
+	color: grey;
+}
+
 .options{
 	margin-bottom: 15px;
 }
@@ -329,7 +333,20 @@ header > img{
 	margin-top: 0px;
 }
 
-.news__aside_lang{
+.news__aside_languages{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	font-family: Consolas;
 	margin: 0px;
+	font-size: 22pt;
+}
+
+.news__aside_lang{
+	background-image: url(/images/gexa.png);
+	background-size: cover;
+	width: 60px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
 }

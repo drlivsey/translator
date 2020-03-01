@@ -12,7 +12,13 @@
 <main>
 	<form class="reg_form" role="form" method="post" action="{{ url('/login') }}"> 
 		{!! csrf_field() !!}
-		<h1 class="reg_form__title">AUTHORISATION</h1>
+		<h1 class="reg_form__title">
+			@if(Session::has('header'))
+				{{Session::get('header')}}
+			@else
+				AUTHORISATION
+			@endif
+		</h1>
 		<div>
 			<input type="text" id="login" name="login" required>
 			<label class="reg_form__movable_label" for="login">Email</label>
