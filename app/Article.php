@@ -17,11 +17,12 @@ class Article extends Model
 
     public static function GetNews()
     {
-		if(\Cache::get('posts', []) == null)
+    	$fromcache = \Cache::get('posts', []);
+		if($fromcache == null)
 			return \Cache::remember('posts', 900, function() {
 				return Article::all();
 			});
 		else
-			return \Cache::get('posts', []);
+			return $fromcache;
     }
 }

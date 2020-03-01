@@ -17,6 +17,7 @@ class CreateCodesTable extends Migration
             $table->bigIncrements('id');
             $table->string('word');
             $table->string('code');
+            $table->string('comment');
             $table->bigInteger('language_id')->unsigned()->default(1);
             $table->foreign('language_id')->references('id')->on('languages');
         });

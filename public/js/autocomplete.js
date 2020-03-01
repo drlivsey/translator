@@ -14,55 +14,60 @@
     	}
     }
 
+    function modal_close()
+    {
+    	modal.style.visibility = 'hidden';
+    }
+
 window.onload=function(){
     /*< и > в <array_name> это не больше и меньше! при добавлении копировать отсюда!*/  
 	var big_db = {
 		"begin":
 		{
 			'create':{
-				'iteger':{
-					'array˂array_name>':['end'], 
-					'variable˂variable_name>':['end']
+				'integer':{
+					'array<array_name>':['end'], 
+					'variable<variable_name>':['end']
 				},
 				'decimal':{
-					'array˂array_name>':['end'], 
-					'variable˂variable_name>':['end']
+					'array<array_name>':['end'], 
+					'variable<variable_name>':['end']
 				},
 				'char':{
-					'array˂array_name>':['end'],
-					'variable˂variable_name>':['end']
+					'array<array_name>':['end'],
+					'variable<variable_name>':['end']
 				}, 
 				'string':{
-					'array˂array_name>':['end'], 
-					'variable˂variable_name>':['end']
+					'array<array_name>':['end'], 
+					'variable<variable_name>':['end']
 				}, 
 				'floating point':{
-					'array˂array_name>':['end'], 
-					'variable˂variable_name>':['end']
+					'array<array_name>':['end'], 
+					'variable<variable_name>':['end']
 				}, 
 				'boolean':{
-					'array˂array_name>':['end'], 
-					'variable˂variable_name>':['end']
+					'array<array_name>':['end'], 
+					'variable<variable_name>':['end']
 				}, 
-				'object˂object_name>':['end']
+				'object<object_name>':['end']
 			}, 
 			'delete':{
-				'array˂array_name>':['end'],
-				'variable˂variable_name>':['end'], 
-				'object˂object_name>':['end']
+				'array<array_name>':['end'],
+				'variable<variable_name>':['end'], 
+				'object<object_name>':['end']
 			}, 
 			'calculate':{
-				'sum(˂variable_name> and ˂variable_name>':['end'], 
-				'quotient(˂variable_name> and ˂variable_name>)':['end'], 
-				'difference(˂variable_name> and ˂variable_name>)':['end'], 
-				'product(˂variable_name> and ˂variable_name>)':['end'], 
-				'square root(˂variable_name>)':['end'], 
-				'power(˂variable_name>, degree)':['end']
+				'sum(<variable_name> and <variable_name>':['end'], 
+				'quotient(<variable_name> and <variable_name>)':['end'], 
+				'difference(<variable_name> and <variable_name>)':['end'], 
+				'product(<variable_name> and <variable_name>)':['end'], 
+				'square root(<variable_name>)':['end'], 
+				'power(<variable_name>, degree)':['end']
 			}, 
 			'change':{
-				'variable(˂variable_name>)':['end'], 
+				'variable(<variable_name>)':['end'], 
 				'element of array[element number]':['end'], 
-				'field of object(˂field_name>)':['end']
+				'field of object(<field_name>)':['end']
 			}, 
 			'replace':{
 				'elements of array(from [old_value] to [new value])':['end'], 
@@ -81,8 +86,8 @@ window.onload=function(){
 				}
 			}, 
 			'compare':{
-				'variables(˂variable_name> and ˂variable_name>)':['end'], 
-				'boolean variables(˂variable_name> and ˂variable_name>)':['end']
+				'variables(<variable_name> and <variable_name>)':['end'], 
+				'boolean variables(<variable_name> and <variable_name>)':['end']
 			}, 
 			'sort':{
 				'array':{

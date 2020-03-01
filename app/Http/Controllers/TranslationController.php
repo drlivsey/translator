@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
+use App\Code;
+use App\Language;
 
 class TranslationController extends Controller
 {
@@ -18,12 +20,24 @@ class TranslationController extends Controller
 
     public function GetCode(Request $request)
     {
-    	$regexp = '/array˂[a-z]˃/';
+    	$language = Language::find($request->radio_l);
+    	$algorithms = Language::GetAlgorithms($language);
+    	$regexp = "/<([\w]+)>/";
     	$comands = explode(',', $request->editor);
-    	//foreach ($comands as $comand) {
-    		$result = preg_match_all($regexp, $comands[0], $match);
-    	//}
-    	return $result;
+    	$var_names = [];
+    	$result = "";
+    	foreach ($comands as $comand) {
+    		preg_match_all($regexp, $comand, $match);
+    		for ($i = 0; $i < count($match[0]); $i++) {
+    			$word = trim(str_ireplace($match[0][$i], '', $comand));
+    			$code = $algorithms->where('word', $word)->first();
+    			if($code != null)
+    				$result .= ' '.str_ireplace('_', $match[1][$i], $code->code).' '.$code->comment.'<br>';
+    			else
+    				return Redirect::back()->with('syntax_error', $word)->withInput();
+    		}
+    	}
+    	return Redirect::back()->with('syntax', $result);
     }
 
 }

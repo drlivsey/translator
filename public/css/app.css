@@ -350,3 +350,57 @@ header > img{
 	line-height: 70px;
 	text-align: center;
 }
+
+.modal__body{
+	position: absolute;
+	width: 100%;
+	height: 175%;
+	background-color: rgba(54, 54, 54, 0.8);
+	display: block !important;
+	visibility: visible;
+	top:0px;
+	left: 0px;
+}
+
+.modal__syntax_error{
+	position: relative;
+	width: 500px;
+	height: 300px;
+	left: calc(50vw - 250px);
+	top: calc(50vh - 150px);
+	background-color: rgb(35, 35, 35);
+}
+
+.modal__close{
+	position: absolute;
+	top: 5px;
+	left: 473px;
+	background-image: url(/images/gexa.png);
+	background-size: cover;
+	width: 22px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.modal__syntax_error_header{
+	text-align: center;
+	padding-top: 20px;
+}
+
+.modal__syntax_error_body{
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	text-align: justify;
+}
+
+.modal__syntax_error_fix{
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
