@@ -371,10 +371,19 @@ header > img{
 	background-color: rgb(35, 35, 35);
 }
 
+.modal__syntax_code{
+	position: relative;
+	width: 70vw;
+	height: 80vh;
+	left: calc(50vw - 35vw);
+	top: calc(50vh - 40vh);
+	background-color: rgb(35, 35, 35);
+}
+
 .modal__close{
 	position: absolute;
 	top: 5px;
-	left: 473px;
+	right: 5px;
 	background-image: url(/images/gexa.png);
 	background-size: cover;
 	width: 22px;
@@ -384,16 +393,17 @@ header > img{
 	cursor: pointer;
 }
 
-.modal__syntax_error_header{
+.modal__syntax_header{
 	text-align: center;
 	padding-top: 20px;
 }
 
-.modal__syntax_error_body{
+.modal__syntax_body{
 	margin-left: 25px;
 	margin-right: 25px;
 	margin-bottom: 25px;
 	text-align: justify;
+	font-family: Consolas;
 }
 
 .modal__syntax_error_fix{

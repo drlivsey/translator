@@ -20,14 +20,24 @@
 	<div id="modal" class="modal__body">
 		<div class="modal__syntax_error">
 			<div class="modal__close" onclick="modal_close()">X</div>
-			<h2 class="modal__syntax_error_header">ERROR OCCURED!</h2>
-			<div class="modal__syntax_error_body">Expression syntax, there is not sach command line as "{{Session::get('syntax_error')}}"
+			<h2 class="modal__syntax_header">ERROR OCCURED!</h2>
+			<div class="modal__syntax_body">Expression syntax, there is not sach command line as "{{Session::get('syntax_error')}}"
 				<div class="modal__syntax_error_fix">Fix commands and try again!</div>
 			</div>
 		</div>
 	</div>
 @elseif(Session::has('syntax'))
-	
+	<div id="modal" class="modal__body">
+		<div class="modal__syntax_code">
+			<div class="modal__close" onclick="modal_close()">X</div>
+			<h2 class="modal__syntax_header">TRANSLATED CODE</h2>
+			<div class="modal__syntax_body">
+				@foreach(Session::get('syntax') as $syn)
+					{{ $syn }}
+				@endforeach
+			</div>
+		</div>
+	</div>
 @endif
 <main>
 	<form class="main__body" role="form" method="POST" action="{{ url('/translate') }}">

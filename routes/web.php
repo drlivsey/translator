@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', 'NewsController@ShowNews');
 Route::post('/reg', 'Auth\RegisterController@Register');
 Route::get('/reg', 'Auth\RegisterController@showRegisterForm')->name('reg')->middleware('guest');
 Route::post('/login','Auth\LoginController@Login');
