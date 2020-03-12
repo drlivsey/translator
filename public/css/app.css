@@ -292,9 +292,31 @@ header > img{
 	font-size: 24pt;
 }
 
+.news__question_header{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.news__answer_header{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 16pt;
+}
+
 .news__paragraph{
 	margin: 0px;
+	line-height: 25px;
+	text-indent: 30px;
 }
+
+.news__paragraph_faq{
+	margin: 0px;
+	line-height: 25px;
+	padding-left: 30px;
+}
+
 
 .news__info{
 	margin-bottom: 20px;
@@ -316,6 +338,15 @@ header > img{
 
 .news__one{
 	margin-bottom: 30px;
+}
+
+.news__picture{
+	width: 30%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
 .news__aside{

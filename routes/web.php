@@ -20,6 +20,6 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout')->middleware
 Route::get('/home', 'NewsController@ShowNews')->name('home');
 Route::view('/rules', 'rules')->name('rules');
 Route::view('/help', 'help')->name('help');
-Route::view('/about', 'about')->name('about');
+//Route::view('/about', 'about')->name('about');
 Route::get('/translate', 'TranslationController@showWorkspace')->name('translate');
 Route::post('/translate', 'TranslationController@GetCode');

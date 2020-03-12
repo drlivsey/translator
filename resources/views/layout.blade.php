@@ -38,10 +38,11 @@
 			<a class="menu_item_layer__first" href="{{ asset('help') }}">HELP</a>
 			<a class="menu_item_layer__second" href="{{ asset('help') }}">HELP</a>
 		</div>
+		<!--
 		<div>
 			<a class="menu_item_layer__first" href="{{ asset('about') }}">ABOUT US</a>
 			<a class="menu_item_layer__second" href="{{ asset('about') }}">ABOUT US</a>
-		</div>
+		</div>-->
 	@yield('content')
 </body>
 </html>
